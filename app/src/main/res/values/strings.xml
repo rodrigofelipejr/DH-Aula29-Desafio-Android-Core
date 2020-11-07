@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">Food</string>
-    <string name="food">Food</string>
+    <string name="app_name">Foods</string>
+    <string name="foods">Foods</string>
+
+    <string name="title_default">Digital House Foods</string>
+    <string name="button_login">LOGIN</string>
+    <string name="register">Register</string>
+    <string name="or">OR</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>

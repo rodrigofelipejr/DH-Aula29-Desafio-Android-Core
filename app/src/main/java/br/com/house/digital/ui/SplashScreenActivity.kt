@@ -3,8 +3,6 @@ package br.com.house.digital.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import br.com.house.digital.MainActivity
-import br.com.house.digital.R
 import br.com.house.digital.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -20,8 +18,8 @@ class SplashScreenActivity : AppCompatActivity() {
 
     private fun init() {
         binding.imageViewSplash.alpha = 0f
-        binding.imageViewSplash.animate().setDuration(1000).alpha(1f).withEndAction {
-            startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+        binding.imageViewSplash.animate().setDuration(700).alpha(1f).withEndAction {
+            startActivity(Intent(this@SplashScreenActivity, LoginActivity::class.java))
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
         }
