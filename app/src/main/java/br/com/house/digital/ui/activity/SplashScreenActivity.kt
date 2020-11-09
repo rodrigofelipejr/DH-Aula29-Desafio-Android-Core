@@ -1,4 +1,4 @@
-package br.com.house.digital.ui
+package br.com.house.digital.ui.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

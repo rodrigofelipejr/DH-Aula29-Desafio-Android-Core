@@ -24,7 +24,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
-
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -55,6 +54,7 @@
         style="@style/Custom.Button.Red.TextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/input_margin_large"
         android:layout_marginBottom="@dimen/input_margin_medium"
         android:text="@string/button_login"
         app:layout_constraintBottom_toTopOf="@id/linearLayoutLine"

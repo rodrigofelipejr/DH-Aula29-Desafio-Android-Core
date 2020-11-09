@@ -1,4 +1,4 @@
-package br.com.house.digital.ui
+package br.com.house.digital.ui.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import br.com.house.digital.R
 import br.com.house.digital.databinding.ActivityLoginBinding
+import br.com.house.digital.ui.activity.LoginRegisterActivity
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityLoginBinding

@@ -1,4 +1,4 @@
-package br.com.house.digital.ui
+package br.com.house.digital.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,7 +15,8 @@ class LoginRegisterActivity : AppCompatActivity() {
 
         val toolbar = binding.includeToolbar.materialToolbar
         setSupportActionBar(toolbar)
-
         setTitle(R.string.title_default)
+
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 }

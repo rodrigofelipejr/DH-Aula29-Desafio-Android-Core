@@ -10,11 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foods">
         <activity
-            android:name=".ui.LoginActivity"
+            android:parentActivityName=".ui.activity.LoginActivity"
+            android:name=".ui.activity.LoginRegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Foods.NoActionBar"/>
         <activity
-            android:name=".ui.SplashScreenActivity"
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Foods.NoActionBar" />
+        <activity
+            android:name=".ui.activity.SplashScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Foods.Fullscreen">
             <intent-filter>
