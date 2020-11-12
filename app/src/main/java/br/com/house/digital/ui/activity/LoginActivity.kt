@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import br.com.house.digital.MainActivity
 import br.com.house.digital.R
 import br.com.house.digital.databinding.ActivityLoginBinding
 import br.com.house.digital.ui.activity.LoginRegisterActivity
@@ -21,10 +22,10 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         setTitle(R.string.title_default)
 
-        init()
+        setClickListener()
     }
 
-    private fun init() {
+    private fun setClickListener() {
         binding.includeContentLogin.buttonLogin.setOnClickListener(this)
         binding.includeContentLogin.buttonRegister.setOnClickListener(this)
     }
@@ -32,7 +33,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         when (view.id) {
             R.id.buttonLogin -> {
-                startActivity(Intent(this@LoginActivity, LoginRegisterActivity::class.java))
+                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
             }
             R.id.buttonRegister -> {
                 startActivity(Intent(this@LoginActivity, LoginRegisterActivity::class.java))

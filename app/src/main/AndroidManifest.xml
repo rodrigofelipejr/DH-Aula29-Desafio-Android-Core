@@ -8,16 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Foods">
+        android:theme="@style/Theme.Foods.NoActionBar">
         <activity
-            android:parentActivityName=".ui.activity.LoginActivity"
             android:name=".ui.activity.LoginRegisterActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Foods.NoActionBar"/>
+            android:parentActivityName=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.LoginActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Foods.NoActionBar" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.SplashScreenActivity"
             android:screenOrientation="portrait"

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_small"
+    android:layout_marginVertical="@dimen/margin_tiny"
+    android:elevation="1dp"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewRestaurant"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/restaurante"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/restaurant1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_small">
+
+            <TextView
+                android:id="@+id/textViewName"
+                style="@style/Custom.TextView.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Sí Señor!" />
+
+            <TextView
+                android:id="@+id/textViewAddress"
+                style="@style/Custom.TextView.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Alameda Jauaperi, 626 - Moema" />
+
+            <TextView
+                android:id="@+id/textViewOpeningHours"
+                style="@style/Custom.TextView.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Fecha às 01:00" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

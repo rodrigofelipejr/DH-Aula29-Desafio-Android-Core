@@ -10,4 +10,5 @@
     <string name="name">Name</string>
     <string name="repeat_password">Repeat Password</string>
     <string name="register">Register</string>
+    <string name="restaurante">Restaurante</string>
 </resources>

@@ -73,4 +73,27 @@
         <item name="android:background">@color/blue_500</item>
     </style>
 
+    /* TextView - Title */
+
+    <style name="Custom.TextView.Title" parent="Theme.Foods">
+        <item name="android:textColor">@color/color_font1</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="color">@color/color_font1</item>
+    </style>
+
+    /* TextView - Body1 */
+
+    <style name="Custom.TextView.Body1" parent="Theme.Foods">
+        <item name="android:textColor">@color/gray_500</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    /* TextView - Body2 */
+
+    <style name="Custom.TextView.Body2" parent="Theme.Foods">
+        <item name="android:textColor">@color/gray_500</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>

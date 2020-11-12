@@ -10,10 +10,13 @@
 
     <color name="red_500">#FFFF5252</color>
 
-    <color name="blue_500">#FF3F51B5</color>
+    <color name="blue_500">#FF3F51B5</color>  android:textSize="36sp"
+                android:textStyle="bold"
     <color name="blue_700">#FF303F9F</color>
 
     <color name="gray_500">#FF8492A6</color>
     <color name="gray_200">#FFC0CCDA</color>
+
+    <color name="color_font1">#FF1F2D3D</color>
 
 </resources>
