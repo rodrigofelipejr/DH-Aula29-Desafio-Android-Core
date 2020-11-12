@@ -11,4 +11,6 @@
     <string name="repeat_password">Repeat Password</string>
     <string name="register">Register</string>
     <string name="restaurante">Restaurante</string>
+    <string name="restaurante_detalhes">Restaurante - Detalhes</string>
+    <string name="pratos_principais">Pratos principais</string>
 </resources>

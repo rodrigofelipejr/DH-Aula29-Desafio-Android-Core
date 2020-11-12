@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.activity.RestaurantDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewRestaurantDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:contentDescription="@string/restaurante_detalhes"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/restaurant1" />
+
+        <TextView
+            android:id="@+id/textViewNameRestaurant"
+            style="@style/Custom.TextView.Title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_tiny"
+            tools:text="Tony Roma's"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewRestaurantDetails"
+            app:layout_constraintEnd_toEndOf="@id/imageViewRestaurantDetails"
+            app:layout_constraintStart_toStartOf="@id/imageViewRestaurantDetails" />
+
+        <TextView
+            android:id="@+id/textViewDishes"
+            style="@style/Custom.TextView.Title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_tiny"
+            android:text="@string/pratos_principais"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewRestaurantDetails" />
+
+        <include
+            style=""
+            android:id="@+id/include_toolbar"
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

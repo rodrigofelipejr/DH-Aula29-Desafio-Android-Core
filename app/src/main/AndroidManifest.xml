@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foods.NoActionBar">
         <activity
+            android:name=".ui.activity.RestaurantDetailsActivity"
+            android:parentActivityName=".ui.activity.RestaurantActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.activity.LoginRegisterActivity"
             android:parentActivityName=".ui.activity.LoginActivity"
             android:screenOrientation="portrait" />
@@ -26,7 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ui.activity.RestaurantActivity" />
     </application>
 
 </manifest>

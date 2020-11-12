@@ -5,7 +5,9 @@
     android:layout_height="wrap_content">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/materialAppBarLayout"
         android:layout_width="match_parent"
+        android:backgroundTint="@android:color/transparent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar

@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import br.com.house.digital.MainActivity
 import br.com.house.digital.R
 import br.com.house.digital.databinding.ActivityLoginRegisterBinding
 
@@ -32,7 +31,7 @@ class LoginRegisterActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         when (view.id) {
             R.id.buttonRegister -> {
-                startActivity(Intent(this@LoginRegisterActivity, MainActivity::class.java))
+                startActivity(Intent(this@LoginRegisterActivity, RestaurantActivity::class.java))
             }
         }
     }

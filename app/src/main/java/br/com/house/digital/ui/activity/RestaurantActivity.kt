@@ -1,27 +1,29 @@
-package br.com.house.digital
+package br.com.house.digital.ui.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import br.com.house.digital.databinding.ActivityMainBinding
+import br.com.house.digital.R
+import br.com.house.digital.databinding.ActivityRestaurantBinding
 import br.com.house.digital.helper.RecyclerViewItemClickListener
 import br.com.house.digital.model.Restaurant
 import br.com.house.digital.ui.adapter.AdapterRestaurant
 
-class MainActivity : AppCompatActivity(),
+class RestaurantActivity : AppCompatActivity(),
     AdapterView.OnItemClickListener,
     RecyclerViewItemClickListener.OnItemClickListener {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityRestaurantBinding
     private var listRestaurants = getRestaurants()
     private lateinit var adapterRestaurant: AdapterRestaurant
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityRestaurantBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val toolbar = binding.includeToolbar.materialToolbar
@@ -67,7 +69,7 @@ class MainActivity : AppCompatActivity(),
         adapterRestaurant = AdapterRestaurant(listRestaurants)
 
         with(binding) {
-            recyclerViewRestaurants.layoutManager = LinearLayoutManager(this@MainActivity)
+            recyclerViewRestaurants.layoutManager = LinearLayoutManager(this@RestaurantActivity)
             recyclerViewRestaurants.setHasFixedSize(true)
             recyclerViewRestaurants.adapter = adapterRestaurant
 
@@ -75,7 +77,7 @@ class MainActivity : AppCompatActivity(),
                 RecyclerViewItemClickListener(
                     applicationContext,
                     recyclerViewRestaurants,
-                    this@MainActivity
+                    this@RestaurantActivity
                 )
             )
         }
@@ -83,8 +85,10 @@ class MainActivity : AppCompatActivity(),
 
     override fun onItemClick(view: View?, position: Int) {
         val restaurant: Restaurant = listRestaurants.get(position)
-        Toast.makeText(applicationContext, "Restaurant: " + restaurant.name, Toast.LENGTH_SHORT)
-            .show()
+        val intent = Intent(this@RestaurantActivity, RestaurantDetailsActivity::class.java)
+        intent.putExtra("EXTRA_RESTAURANT", restaurant)
+
+        startActivity(intent)
     }
 
     override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {

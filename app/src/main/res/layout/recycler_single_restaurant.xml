@@ -30,21 +30,21 @@
 
             <TextView
                 android:id="@+id/textViewName"
-                style="@style/Custom.TextView.Title"
+                style="@style/Custom.TextView.Title1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="Sí Señor!" />
 
             <TextView
                 android:id="@+id/textViewAddress"
-                style="@style/Custom.TextView.Body2"
+                style="@style/Custom.TextView.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="Alameda Jauaperi, 626 - Moema" />
 
             <TextView
                 android:id="@+id/textViewOpeningHours"
-                style="@style/Custom.TextView.Body1"
+                style="@style/Custom.TextView.Body2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="Fecha às 01:00" />
