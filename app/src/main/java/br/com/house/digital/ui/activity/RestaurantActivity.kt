@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.house.digital.R
 import br.com.house.digital.databinding.ActivityRestaurantBinding
+import br.com.house.digital.helper.Constants
 import br.com.house.digital.helper.RecyclerViewItemClickListener
 import br.com.house.digital.model.Dish
 import br.com.house.digital.model.Restaurant
@@ -35,17 +36,17 @@ class RestaurantActivity : AppCompatActivity(),
     }
 
     private fun getRestaurants(): ArrayList<Restaurant> {
-        val listDish = arrayListOf<Dish>(
-            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
-            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
-            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
-            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
-            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
-            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
-            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
-            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
-            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
-        )
+        val listDish = arrayListOf<Dish>()
+
+        for (i in 1..9) {
+            listDish.add(
+                Dish(
+                    Constants.DISH_NAME,
+                    R.drawable.restaurant2,
+                    Constants.DISH_DESCRIPTION
+                ),
+            )
+        }
 
         val restaurantA = Restaurant(
             "Tony Roma's",

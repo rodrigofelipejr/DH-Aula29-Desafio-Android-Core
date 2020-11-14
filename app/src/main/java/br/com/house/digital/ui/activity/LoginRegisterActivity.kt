@@ -21,6 +21,11 @@ class LoginRegisterActivity : AppCompatActivity(), View.OnClickListener {
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
+        toolbar.setNavigationOnClickListener {
+            this.stopLockTask();
+            this.onBackPressed();
+        }
+
         setClickListener()
     }
 

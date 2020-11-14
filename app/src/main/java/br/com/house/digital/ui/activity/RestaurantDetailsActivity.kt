@@ -1,8 +1,8 @@
 package br.com.house.digital.ui.activity
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.GridView
 import androidx.appcompat.app.AppCompatActivity
@@ -25,9 +25,12 @@ class RestaurantDetailsActivity : AppCompatActivity() {
         initToolbar()
 
         extras = intent.extras
-        restaurant = intent.extras?.get("EXTRA_RESTAURANT") as Restaurant
-        setValues()
-        setValuesGridView()
+
+        if (extras != null) {
+            restaurant = intent.extras?.get("EXTRA_RESTAURANT") as Restaurant
+            setValues()
+            setValuesGridView()
+        }
     }
 
     private fun setValuesGridView() {
@@ -38,6 +41,11 @@ class RestaurantDetailsActivity : AppCompatActivity() {
 
         gridDishes.onItemClickListener =
             AdapterView.OnItemClickListener { parent, view, position, id ->
+
+                val intent = Intent(this@RestaurantDetailsActivity, DishDetailsActivity::class.java)
+                intent.putExtra("EXTRA_DISH", restaurant.dishes[position])
+
+                startActivity(intent)
             }
     }
 
@@ -46,6 +54,11 @@ class RestaurantDetailsActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        toolbar.setNavigationOnClickListener {
+            this.stopLockTask();
+            this.onBackPressed();
+        }
 
         binding.includeToolbar.materialAppBarLayout.setBackgroundColor(Color.TRANSPARENT)
         binding.includeToolbar.materialAppBarLayout.targetElevation = 0f
