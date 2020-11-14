@@ -55,17 +55,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <GridView
+        <br.com.house.digital.helper.WrappingGridView
             android:id="@+id/gridViewDishes"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_tiny"
             android:gravity="center"
-            android:paddingHorizontal="@dimen/padding_tiny"
             android:horizontalSpacing="10dp"
-            android:nestedScrollingEnabled="true"
-            android:numColumns="auto_fit"
-            android:stretchMode="columnWidth"
+            android:numColumns="2"
+            android:paddingHorizontal="@dimen/padding_tiny"
             android:verticalSpacing="@dimen/margin_tiny"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

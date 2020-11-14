@@ -2,12 +2,14 @@ package br.com.house.digital.ui.activity
 
 import android.graphics.Color
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.GridView
 import androidx.appcompat.app.AppCompatActivity
 import br.com.house.digital.databinding.ActivityRestaurantDetailsBinding
 import br.com.house.digital.model.Restaurant
 import br.com.house.digital.ui.adapter.AdapterDishes
+
 
 class RestaurantDetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRestaurantDetailsBinding
@@ -33,9 +35,9 @@ class RestaurantDetailsActivity : AppCompatActivity() {
 
         val adapterDishes = AdapterDishes(this@RestaurantDetailsActivity, restaurant.dishes)
         gridDishes.adapter = adapterDishes
+
         gridDishes.onItemClickListener =
             AdapterView.OnItemClickListener { parent, view, position, id ->
-
             }
     }
 
@@ -45,8 +47,10 @@ class RestaurantDetailsActivity : AppCompatActivity() {
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        binding.includeToolbar.materialToolbar.setBackgroundColor(Color.TRANSPARENT)
         binding.includeToolbar.materialAppBarLayout.setBackgroundColor(Color.TRANSPARENT)
+        binding.includeToolbar.materialAppBarLayout.targetElevation = 0f
+
+        binding.includeToolbar.materialToolbar.setBackgroundColor(Color.TRANSPARENT)
 
         setTitle("")
     }
