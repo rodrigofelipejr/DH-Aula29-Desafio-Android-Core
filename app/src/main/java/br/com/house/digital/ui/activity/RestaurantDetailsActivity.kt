@@ -1,17 +1,19 @@
 package br.com.house.digital.ui.activity
 
-import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import br.com.house.digital.R
+import android.widget.AdapterView
+import android.widget.GridView
+import androidx.appcompat.app.AppCompatActivity
 import br.com.house.digital.databinding.ActivityRestaurantDetailsBinding
 import br.com.house.digital.model.Restaurant
+import br.com.house.digital.ui.adapter.AdapterDishes
 
 class RestaurantDetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRestaurantDetailsBinding
     private var extras: Bundle? = null
+    private lateinit var gridDishes: GridView
+    private lateinit var restaurant: Restaurant
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +23,20 @@ class RestaurantDetailsActivity : AppCompatActivity() {
         initToolbar()
 
         extras = intent.extras
-        val restaurant = intent.extras?.get("EXTRA_RESTAURANT") as Restaurant
-        setValues(restaurant)
+        restaurant = intent.extras?.get("EXTRA_RESTAURANT") as Restaurant
+        setValues()
+        setValuesGridView()
+    }
+
+    private fun setValuesGridView() {
+        gridDishes = binding.gridViewDishes
+
+        val adapterDishes = AdapterDishes(this@RestaurantDetailsActivity, restaurant.dishes)
+        gridDishes.adapter = adapterDishes
+        gridDishes.onItemClickListener =
+            AdapterView.OnItemClickListener { parent, view, position, id ->
+
+            }
     }
 
     private fun initToolbar() {
@@ -37,7 +51,7 @@ class RestaurantDetailsActivity : AppCompatActivity() {
         setTitle("")
     }
 
-    private fun setValues(restaurant: Restaurant) {
+    private fun setValues() {
         with(binding) {
             textViewNameRestaurant.text = restaurant.name
             imageViewRestaurantDetails.setImageResource(restaurant.resourceImage)

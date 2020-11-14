@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.house.digital.R
 import br.com.house.digital.databinding.ActivityRestaurantBinding
 import br.com.house.digital.helper.RecyclerViewItemClickListener
+import br.com.house.digital.model.Dish
 import br.com.house.digital.model.Restaurant
 import br.com.house.digital.ui.adapter.AdapterRestaurant
 
@@ -34,32 +35,48 @@ class RestaurantActivity : AppCompatActivity(),
     }
 
     private fun getRestaurants(): ArrayList<Restaurant> {
+        val listDish = arrayListOf<Dish>(
+            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
+            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
+            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
+            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
+            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
+            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
+            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
+            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
+            Dish("Salada com molho Gengibre", R.drawable.restaurant2),
+        )
+
         val restaurantA = Restaurant(
             "Tony Roma's",
             "Av. Lavandisca, 717 - Indianópolis, São Paulo",
             "Fecha às 22:00",
-            R.drawable.restaurant1
+            R.drawable.restaurant1,
+            listDish
         )
 
         val restaurantB = Restaurant(
             "Aoyama - Moema",
             "Alameda dos Arapanés, 532 - Moema",
             "Fecha às 00:00",
-            R.drawable.restaurant2
+            R.drawable.restaurant2,
+            listDish
         )
 
         val restaurantC = Restaurant(
             "Outback - Moema",
             "Av. Moaci, 187, 187 - Moema, São Paulo",
             "Fecha às 00:00",
-            R.drawable.restaurant3
+            R.drawable.restaurant3,
+            listDish
         )
 
         val restaurantD = Restaurant(
             "Sí Señor!",
             "Alameda Jauaperi, 626 - Moema",
             "Fecha às 01:00",
-            R.drawable.restaurant4
+            R.drawable.restaurant4,
+            listDish
         )
 
         return arrayListOf(restaurantA, restaurantB, restaurantC, restaurantD)

@@ -4,7 +4,8 @@ import java.io.Serializable
 
 class Restaurant(
     val name: String,
-    var address: String,
-    var openingHours: String,
-    var resourceImage: Int
+    val address: String,
+    val openingHours: String,
+    val resourceImage: Int,
+    val dishes: ArrayList<Dish>
 ) : Serializable
